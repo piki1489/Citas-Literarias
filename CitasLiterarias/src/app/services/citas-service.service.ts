@@ -1,16 +1,12 @@
-import { Component } from '@angular/core';
-import { Cita } from './interfaces/cita.interface';
+import { Injectable } from '@angular/core';
+import { Cita } from '../interfaces/cita.interface';
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+@Injectable({
+  providedIn: 'root'
 })
-export class AppComponent {
+export class CitasServiceService {
 
-  title = 'CitasLiterarias';
-
-  public arrCita: Cita[] = [];
+  arrCita: Cita[];
 
   constructor() {
     this.arrCita = [
@@ -26,6 +22,11 @@ export class AppComponent {
     ]
   }
 
+  getAll() {
+    return this.arrCita;
+  }
 
+  create(pCita: Cita) {
+
+  }
 }
-

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Cita } from 'src/app/interfaces/cita.interface';
 
 @Component({
   selector: 'app-lista-citas',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaCitasComponent implements OnInit {
 
-  constructor() { }
+  @Input() entradaCita: Cita[];
+
+  constructor() {
+    this.entradaCita = [];
+  }
 
   ngOnInit(): void {
   }

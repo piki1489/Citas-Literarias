@@ -7,6 +7,7 @@ import { ListaCitasComponent } from './components/lista-citas/lista-citas.compon
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { HomeComponent } from './components/home/home.component';
 import { FavoritasComponent } from './components/favoritas/favoritas.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { FavoritasComponent } from './components/favoritas/favoritas.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

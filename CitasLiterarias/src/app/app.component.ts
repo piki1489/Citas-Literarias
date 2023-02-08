@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Cita } from './interfaces/cita.interface';
+import { FormularioComponent } from './components/formulario/formulario.component';
 
 @Component({
   selector: 'app-root',
@@ -26,6 +27,10 @@ export class AppComponent {
     ]
   }
 
+  manejarNuevaCita(pCita: Cita) {
+    console.log('Nueva cita:', pCita);
+
+  }
 
 }
 

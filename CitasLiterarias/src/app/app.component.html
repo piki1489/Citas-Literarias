@@ -1,2 +1,2 @@
 <router-outlet></router-outlet>
-<app-lista-citas [entradaCita]="arrCita" *ngFor="cita of arrCita"></app-lista-citas>
+<app-formulario (nuevaCita)="manejarNuevaCita($event)"></app-formulario>

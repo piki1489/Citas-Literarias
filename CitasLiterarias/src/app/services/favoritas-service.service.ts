@@ -6,18 +6,12 @@ import { Cita } from '../interfaces/cita.interface';
 })
 export class FavoritasServiceService {
 
-  arrFav: Cita[]
+  private arrCitas: Cita[] = [];
 
-  constructor() {
-    this.arrFav = [];
-  }
+  constructor() { }
 
-  add(pCita: Cita) {
 
-  }
-
-  remove(pIndex: Number) {
-
-  }
 
 }
+
+

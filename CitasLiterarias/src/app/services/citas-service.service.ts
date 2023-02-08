@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Cita } from '../interfaces/cita.interface';
+import { firstValueFrom } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -7,6 +8,7 @@ import { Cita } from '../interfaces/cita.interface';
 export class CitasServiceService {
 
   arrCita: Cita[];
+  arrCitas: Cita[]
 
   constructor() {
     this.arrCita = [
@@ -20,6 +22,7 @@ export class CitasServiceService {
 
       }
     ]
+    this.arrCitas = [];
   }
 
   getAll() {
@@ -27,6 +30,21 @@ export class CitasServiceService {
   }
 
   create(pCita: Cita) {
-
+    this.arrCita.push(pCita);
+    return pCita;
   }
+
+  addCita(pCita: Cita) {
+    this.arrCitas.push(pCita);
+  }
+
+  getCitas(): Cita[] {
+    return this.arrCitas;
+  }
+
+  addFav(pCita: Cita) {
+
+    console.log('Cita agregada a favoritos: ', pCita);
+  }
+
 }

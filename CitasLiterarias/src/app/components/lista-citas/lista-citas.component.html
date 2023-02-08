@@ -1,11 +1,11 @@
-<div class="container-lg">
+<div class="container-lg" *ngFor="let cita of entradaCita">
   <div class="row">
-    <button type="button" class="btn btn-primary">Marcar favorita</button>
-    <div class="col-3">Titulo libro</div>
-    <div class="col-3">Página</div>
-    <div class="col-3">Autor</div>
-    <div class="col-3">Texto</div>
-    <div class="col-3">Fecha cita</div>
-    <div class="col-3">Notas</div>
+    <button type="button" class="btn btn-primary" (click)="addFav()">Marcar favorita</button>
+    <div class="col-3">Titulo libro:{{cita.titulo_libro}}</div>
+    <div class="col-3">Página:{{cita.pagina}}</div>
+    <div class="col-3">Autor:{{cita.autor}}</div>
+    <div class="col-3">Texto:{{cita.texto}}</div>
+    <div class="col-3">Fecha cita:{{cita.fecha_cita}}</div>
+    <div class="col-3">Notas:{{cita.notas}}</div>
   </div>
 </div>

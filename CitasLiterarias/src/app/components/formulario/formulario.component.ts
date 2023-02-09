@@ -14,6 +14,7 @@ export class FormularioComponent implements OnInit {
   @Output() nuevaCita = new EventEmitter<Cita>();
 
   formulario: FormGroup;
+  public cita!: Cita;
 
   constructor(
     private citasService: CitasServiceService

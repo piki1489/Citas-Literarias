@@ -9,6 +9,7 @@ export class CitasServiceService {
 
   arrCita: Cita[];
   arrCitas: Cita[]
+  entradaCita: any;
 
   constructor() {
     this.arrCita = [
@@ -42,9 +43,10 @@ export class CitasServiceService {
     return this.arrCitas;
   }
 
-  addFav(pCita: Cita) {
-
-    console.log('Cita agregada a favoritos: ', pCita);
+  addFav(cita: Cita) {
+    const nuevoFavorito = this.entradaCita.push(cita);
+    console.log(nuevoFavorito);
   }
+
 
 }
